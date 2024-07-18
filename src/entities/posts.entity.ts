@@ -1,6 +1,6 @@
-import { IPost } from './interfaces/post.interface'
+import { IPosts } from './interfaces/posts.interface'
 
-export class Post implements IPost {
+export class Posts implements IPosts {
   id?: number | undefined;
   title: string;
   content: string;
