@@ -1,20 +1,25 @@
 services:
   postgresdb:
-    image: postgres
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
     restart: unless-stopped
     env_file: ./.env
     environment:
       - POSTGRES_USER=$POSTGRESDB_USER
       - POSTGRES_PASSWORD=$POSTGRESDB_ROOT_PASSWORD
       - POSTGRES_DB=$POSTGRESDB_DATABASE
+      - TZ=America/Sao_Paulo
     ports:
       - $POSTGRESDB_LOCAL_PORT:$POSTGRESDB_DOCKER_PORT
     volumes:
-      - db:/var/lib/postgres
+      - db:/var/lib/postgresql/data
   app:
     depends_on:
       - postgresdb
-    build: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile
     restart: unless-stopped
     env_file: ./.env
     ports:

@@ -12,16 +12,6 @@ const dbInit = require('../config/db.init')
 require("dotenv").config();
 
 /**
- *  Initialization database
- */
-
-(async () => {
-  if (process.env.NODE_ENV === 'development') {
-    await dbInit();
-  }
-})();
-
-/**
  * Get port from environment and store in Express.
  */
 
