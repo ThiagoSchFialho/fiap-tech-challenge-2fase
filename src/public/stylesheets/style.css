@@ -1,8 +1,97 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #ebebeb;
 }
 
-a {
-  color: #00B7FF;
+p {
+  margin: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.menu-icon {
+  padding: 23px 25px;
+  cursor: pointer;
+}
+
+.close-icon {
+  background-color: #f6f6f6;
+  cursor: pointer;
+  display: flex !important;
+  justify-content: space-between;
+}
+
+#menu-itens:hover {
+  background-color: #f1f1f1 !important;
+}
+
+.menu-design {
+  background-color: #f6f6f6 !important;
+  padding: 15px;
+}
+
+.blog-header {
+  display: flex;
+  margin: 0;
+  height: 70px;
+  background-color: #f6f6f6;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: arial;
+  padding: 25px 15px 15px 15px;
+}
+
+.blog-title-div {
+  padding: 20px 130px;
+  display: ruby-text;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: arial;
+  width: 50%;
+}
+
+.action-button {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: arial;
+  width: 164px;
+  border-radius: 10px;
+  background-color: #2e63a1;
+  text-align: center;
+  padding: 9px;
+  color: white;
+  margin-top: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.action-button:hover {
+  color: #2e63a1;
+  background-color: white;
+}
+
+.blog-content {
+  padding: 20px 130px;
+  font-family: arial;
+}
+
+.post-box {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  padding: 15px;
+  display: flow-root;
+  border: 1px;
+  box-shadow: 2px 2px #cccccc;
 }

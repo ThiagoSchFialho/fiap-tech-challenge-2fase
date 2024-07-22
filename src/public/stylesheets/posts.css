@@ -1,0 +1,44 @@
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.post-author {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.post-content {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.post-date {
+  font-size: 13px;
+  float: right;
+  margin-top: 22px;
+  color: #999999;
+}
+
+.div-display {
+  display: flex;
+}
+
+.posts-button {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: arial;
+  width: 90px;
+  border-radius: 10px;
+  background-color: #2e63a1;
+  text-align: center;
+  padding: 7px;
+  color: white;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+.red-button {
+	background-color: #d83d46;
+}

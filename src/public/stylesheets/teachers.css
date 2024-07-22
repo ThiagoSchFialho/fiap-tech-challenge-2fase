@@ -1,0 +1,37 @@
+.teacher-header {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.line-style {
+	border-top: 2px solid #ebebeb;
+	margin: 10px 0;
+}
+
+.div-display {
+	display: flex;
+}
+
+.teacher-name {
+	padding: 15px 8px;
+	font-size: 16px;
+}
+
+.teacher-button {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: arial;
+  width: 90px;
+  border-radius: 10px;
+  background-color: #2e63a1;
+  text-align: center;
+  padding: 7px;
+  color: white;
+  margin: 10px 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.red-button {
+	background-color: #d83d46;
+}

@@ -1,0 +1,17 @@
+<%- include('index', { currentPost: currentPost }) %>
+
+<div class="blog-title-div">
+    <p class="page-title">Posts</p>
+    <p class="action-button">Voltar</p>
+  </div>
+
+  <div class="blog-content">
+    <div class="post-box">
+    <p class="post-title"><%= currentPost.title %></p>
+    <p class="post-author"><%= currentPost.author %></p>
+    <p class="post-content"><%= currentPost.content %></p>
+    <p class="post-date"><%= currentPost.createdDate %></p>
+    </div>
+  </div>
+</body>
+</html>
