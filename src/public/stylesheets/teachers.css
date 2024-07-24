@@ -30,6 +30,8 @@
   margin: 10px 10px;
   cursor: pointer;
   float: right;
+  text-decoration: none;
+  transition: 0.7s;
 }
 
 .red-button {

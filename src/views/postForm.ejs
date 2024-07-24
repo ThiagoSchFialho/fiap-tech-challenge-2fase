@@ -1,30 +1,36 @@
 <%- include('index') %>
 
     <div class="blog-title-div">
-      <p class="page-title">Criar Post</p>
+      <p class="page-title"><%= title %></p>
       <!-- Criar condicional de acordo com o método -->
       <!-- <p class="page-title">Editar Post</p> -->
       <p class="action-button">Voltar</p>
     </div>
 
     <div class="blog-content">
-      <div class="post-box">
-        <div class="input-group">
-          <input required="" type="text" name="text" autocomplete="off" class="input">
-          <label class="field-label">Título</label>
+      <% if (isEdit) { %>
+        <form action="<%= formAction %>" method="POST">
+          <input type="hidden" name="_method" value="PUT">
+      <% } else {%>
+        <form action="<%= formAction %>" method="POST">
+      <% }%>
+
+        <div class="post-box">
+          <div class="input-group">
+            <input id="title" type="text" name="title" autocomplete="off" class="input" value="<%= post ? post.title : '' %>" required>
+            <label for="title" class="field-label">Título</label>
+          </div>
+          <div class="input-group">
+            <input id="teacherId" type="text" name="teacherId" autocomplete="off" class="input" value="<%= post ? post.teacherId : '' %>" required>
+            <label for="teacherId" class="field-label">Professor</label>
+          </div>
+          <div class="input-group">
+            <input id="content" type="text" name="content" autocomplete="off" class="input" value="<%= post ? post.content : '' %>" required>
+            <label for="content" class="field-label">Conteúdo</label>
+          </div>
+          <button type="submit" class="create-button"><%= isEdit ? 'Salvar' : 'Criar' %></button>
         </div>
-        <div class="input-group">
-          <input required="" type="text" name="text" autocomplete="off" class="input">
-          <label class="field-label">Professor</label>
-        </div>
-        <div class="input-group">
-          <input required="" type="text" name="text" autocomplete="off" class="input">
-          <label class="field-label">Conteúdo</label>
-        </div>
-        <p class="create-button">Criar</p>
-        <!-- Criar condicional de acordo com o método -->
-        <!-- <p class="create-button">Salvar</p> -->
-      </div>
+      </form>
     </div>
   </body>
 </html>

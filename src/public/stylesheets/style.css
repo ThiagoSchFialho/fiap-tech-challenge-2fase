@@ -74,12 +74,13 @@ p {
   color: white;
   margin-top: 3px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.7s;
+  display: block;
+  text-decoration: none;
 }
 
 .action-button:hover {
-  color: #2e63a1;
-  background-color: white;
+  background-color: #002ead;
 }
 
 .blog-content {
@@ -94,4 +95,17 @@ p {
   display: flow-root;
   border: 1px;
   box-shadow: 2px 2px #cccccc;
+  margin-bottom: 25px;
+}
+
+.blue-button:hover {
+  background-color: #002ead;
+}
+
+.red-button {
+	background-color: #d83d46;
+}
+
+.red-button:hover {
+  background-color: #ff000d;
 }

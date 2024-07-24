@@ -2,7 +2,7 @@
 
     <div class="blog-title-div">
       <p class="page-title">Professores</p>
-      <p class="action-button" style="width: 205px;">Cadastrar Professores</p>
+      <a class="action-button" style="width: 205px;" href="/teacherForm">Cadastrar Professores</a>
       <p class="action-button">Voltar</p>
     </div>
 
@@ -13,8 +13,8 @@
         <% teachers.forEach(function(teacher) { %>
           <div class="div-display">
             <p class="teacher-name"><%= teacher.name %></p>
-            <p class="teacher-button">Editar</p>
-            <p class="teacher-button red-button">Excluir</p>
+            <a class="teacher-button blue-button" href="/teacherForm">Editar</a>
+            <a class="teacher-button red-button" href="/teacherForm">Excluir</a>
           </div>
         <% }) %>
       </div>

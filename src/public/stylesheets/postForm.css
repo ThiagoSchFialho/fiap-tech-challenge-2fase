@@ -47,6 +47,11 @@
   color: white;
   margin: 10px 10px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.7s;
   float: right;
+  border: none;
+}
+
+.create-button:hover {
+  background-color: #002ead;
 }
