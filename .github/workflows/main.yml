@@ -16,6 +16,7 @@ jobs:
       DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       DB_DATABASE: ${{ secrets.DB_DATABASE }}
       DB_PORT: ${{ secrets.DB_PORT }}
+      DB_HOST: ${{ secrets.DB_HOST }}
       
     steps:
     - name: Checkout Repository
@@ -43,5 +44,6 @@ jobs:
                      --build-arg DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
                      --build-arg DB_DATABASE=${{ secrets.DB_DATABASE }} \
                      --build-arg DB_PORT=${{ secrets.DB_PORT }} \
+                     --build-arg DB_HOST=${{ secrets.DB_HOST }} \
                      -t $DOCKER_USERNAME/fiap-tech-challenge-2fase:latest -f Dockerfile.prd .
         docker push $DOCKER_USERNAME/fiap-tech-challenge-2fase:latest
