@@ -1,19 +1,25 @@
 <%- include('index') %>
 
     <div class="blog-title-div">
-      <p class="page-title">Criar Professor</p>
-      <!-- <p class="page-title">Editar Professor</p> -->
-      <p class="action-button">Voltar</p>
+      <p class="page-title"><%= title %></p>
     </div>
 
     <div class="blog-content">
-      <div class="post-box">
-        <div class="input-group">
-          <input required="" type="text" name="text" autocomplete="off" class="input">
-          <label class="field-label">Nome</label>
+      <% if (isEdit) { %>
+        <form action="<%= formAction %>" method="POST">
+          <input type="hidden" name="_method" value="PUT">
+      <% } else {%>
+        <form action="<%= formAction %>" method="POST">
+      <% }%>
+
+        <div class="post-box">
+          <div class="input-group">
+            <input id="name" type="text" name="name" autocomplete="off" class="input" value="<%= teacher ? teacher.name : '' %>" required>
+            <label class="field-label">Nome</label>
+          </div>
+          <button type="submit" class="create-button"><%= isEdit ? 'Salvar' : 'Criar' %></button>
         </div>
-        <p class="create-button">Criar</p>
-      </div>
+      </form>
     </div>
   </body>
 </html>
