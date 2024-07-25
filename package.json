@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run build && node ./build/bin/www",
+    "start": "npm run build && ./dist/bin/www",
     "start:dev": "tsx watch ./src/bin/www",
     "test": "jest --forceExit",
     "build": "tsc && npm run copy-ejs && npm run copy-public",
-    "copy-ejs": "copyfiles -u 1 src/**/*.ejs build",
-    "copy-public": "copyfiles -u 1 src/public/**/* build"
+    "copy-ejs": "copyfiles -u 1 src/**/*.ejs dist",
+    "copy-public": "copyfiles -u 1 src/public/**/* dist"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
