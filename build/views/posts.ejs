@@ -1,0 +1,24 @@
+<%- include('index') %>
+
+    <div class="blog-title-div">
+      <p class="page-title">Posts</p>
+    </div>
+
+    <div class="blog-content">
+      <% posts.forEach(function(post) { %>
+        <div class="post-box">
+          <a href="/posts/<%= post.id %>" class="post-title"><%= post.title %></a>
+          <p class="post-author"><%= post.teachername %></p>
+          <p class="post-content"><%= post.content %></p>
+          <p class="post-date"><%= post.createddate %></p>
+          <div class="div-display">
+            <a class="posts-button blue-button" href="/postForm/<%= post.id %>">Editar</a>
+            <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+              <button type="submit" class="posts-button red-button">Excluir</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

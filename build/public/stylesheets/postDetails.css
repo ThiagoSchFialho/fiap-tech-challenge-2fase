@@ -1,0 +1,22 @@
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.post-author {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.post-content {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.post-date {
+  font-size: 13px;
+  float: right;
+  margin-top: 15px;
+  color: #999999;
+}

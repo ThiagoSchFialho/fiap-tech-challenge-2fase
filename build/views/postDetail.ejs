@@ -1,0 +1,16 @@
+<%- include('index') %>
+
+<div class="blog-title-div">
+    <p class="page-title">Posts</p>
+  </div>
+
+  <div class="blog-content">
+    <div class="post-box">
+    <p class="post-title"><%= currentPost.title %></p>
+    <p class="post-author"><%= currentPost.teachername %></p>
+    <p class="post-content"><%= currentPost.content %></p>
+    <p class="post-date"><%= currentPost.createddate %></p>
+    </div>
+  </div>
+</body>
+</html>
